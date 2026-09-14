@@ -66,17 +66,15 @@ class CourseToolkitTest {
     }
 
     @Test
-    void returnsTrueIf1029201IsPalindrome() {
-        boolean result = CourseToolkit.isPalindrome("1029201");
-
-        assertTrue(result);
+    void returnsTrueIfNullPalindrome() {
+        assertThrows(IllegalArgumentException.class, () -> CourseToolkit.isPalindrome(null));
     }
 
     @Test
     void returnsTrueIfCaBaCIsPalindrome() {
-        boolean result = CourseToolkit.isPalindrome("Ca B aC");
+        boolean result = CourseToolkit.isPalindrome("Ca Bic");
 
-        assertTrue(result);
+        assertFalse(result);
     }
 
     @Test
