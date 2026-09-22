@@ -2,6 +2,7 @@ package edu.course.lab01;
 public class CLItest {
     public static void main(String[] args) {
         if (args[0].equals("prime")){
+            
             int number = Integer.parseInt(args[1]);
             System.out.println(CourseToolkit.isPrime(number));
         }
